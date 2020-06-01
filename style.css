@@ -1,1 +1,92 @@
 @import "./css/reset.css";
+
+:root {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.contact-form-wrapper {
+    background-image: url("./assets/images/form_background.jpg");
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 6rem 10rem;
+}
+
+.contact-form-container {
+    padding: 3rem 2rem;
+    border: 1px solid black;
+    box-shadow: 0 0 12px #000;
+
+    max-width: 800px;
+    width: 100%;
+    min-width: 320px;
+}
+
+.form-heading {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.form-instructions {
+    margin: 2rem 0;
+}
+
+.form-submit {
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    margin-left: 160px;
+    max-height: 40px;
+}
+
+.flex-col-even {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+label {
+    flex-basis: 140px;
+    align-self: center;
+}
+
+#messageLabel {
+    align-self: flex-start;
+}
+
+hr {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.contact-form-item {
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ .text-input {
+     flex: 1;
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+ }
+
+ input, select, textarea {
+     flex: 1;
+
+     min-width: 175px;
+     margin-left: 20px;
+ }
+
+
+
+

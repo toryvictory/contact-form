@@ -5,8 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact form</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
+<article class="contact-form-wrapper">
+    <div class="contact-form-container">
+        <h2 class="form-heading">Contact form</h2>
+        <div class="form-instructions">Please fill in your information and we'll be sending your order.</div>
+        <form class="flex-col-even" action="#" method="post">
+            <div class="contact-form-item">
+                <label for="firstName">Your name</label>
+                <div class="text-input">
+                    <input type="text" id="firstName" name="firstName" placeholder="first name"
+                           pattern="[A-ZА-Я][a-zа-я]{1,64}" autofocus/>
+                    <input type="text" id="lastName" name="lastName" placeholder="last name"
+                           pattern="[A-ZА-Я][a-zа-я]{1,64}"/>
+                </div>
+            </div>
+            <div class="contact-form-item">
+                <label for="email">Your email</label>
+                <input class="text-input" type="email" name="email" id="email" placeholder="your_mail@mail.com"/>
+            </div>
+            <div class="contact-form-item">
+                <label for="phone">Phone *</label>
+                <div class="text-input">
+                    <input type="text" name="countryCode" id="phone" placeholder="000" required>
+                    <input type="text" name="operatorCode" placeholder="000" required>
+                    <input type="text" name="phoneNumber" placeholder="0000" required>
+                </div>
+            </div>
+            <div class="contact-form-item">
+                <label for="messageSubject">Message subject * </label>
+                <select class="text-input" name="messageSubject" id="messageSubject" required>
+                    <option value="">Please choose:</option>
+                    <option value="order">Order</option>
+                    <option value="question">Question</option>
+                    <option value="proposal">Proposal</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="contact-form-item">
+                <label id="messageLabel" for="message">Message *</label>
+                <textarea class="text-input" name="message" id="message" rows="5" required></textarea>
+            </div>
+            <hr>
+            <button class="form-submit">Submit form</button>
+        </form>
+    </div>
+</article>
 </body>
 </html>
